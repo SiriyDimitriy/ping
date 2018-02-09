@@ -5,8 +5,9 @@ Next dependencies can be added as needed:
     "loaders.css": "0.1.2",
     "react-paginate": "5.0.0",
     "react-s-alert": "1.4.1",
-    "google-maps-react": "1.1.2"
+    "google-maps-react": "1.1.2",
 
+    "axios": "0.17.1",
 
     "js-to-styles-var-loader": "1.1.0"
 

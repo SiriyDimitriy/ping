@@ -3,7 +3,7 @@ const webpack = require('webpack');
 module.exports = {
     entry: [ 'webpack-dev-server/client?http://localhost:3000/', // WebpackDevServer host and port
         'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
-        './app.jsx'],
+        './src/app.jsx'],
     output: {
         path: __dirname + '/bin',
         filename: 'app.bundle.js',

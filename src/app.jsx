@@ -5,7 +5,7 @@ import {ThemeProvider} from 'styled-components';
 import {HashRouter} from 'react-router-dom';
 import {Provider} from 'react-redux'
 import store from './Store.js';
-import './main.less';
+import '../main.less';
 import Sample from './components/Sample';
 
 ReactDOM.render(
