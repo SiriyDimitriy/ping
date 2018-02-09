@@ -4,7 +4,9 @@
   "description": "ping",
   "main": "webpack.config.js",
   "scripts": {
-    "dev": "webpack-dev-server --port 3000 --progress --watch-poll"
+    "dev": "npm-run-all --parallel webpack-watch webpack-dev-server",
+    "webpack-dev-server": "webpack-dev-server --port 3000",
+    "webpack-watch": "webpack"
   },
   "repository": {
     "type": "git",
@@ -16,6 +18,7 @@
   "author": "Dimitriy",
   "license": "ISC",
   "dependencies": {
+    "npm-run-all": "4.1.2",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-redux": "5.0.6",

@@ -1,10 +1,13 @@
 const webpack = require('webpack');
 
 module.exports = {
-    entry: './app.jsx',
+    entry: [ 'webpack-dev-server/client?http://localhost:3000/', // WebpackDevServer host and port
+        'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
+        './app.jsx'],
     output: {
         path: __dirname + '/bin',
-        filename: 'app.bundle.js'
+        filename: 'app.bundle.js',
+        publicPath: 'bin/'
     },
     module: {
         loaders: [{
@@ -69,11 +72,12 @@ module.exports = {
         aggregateTimeout: 100
     },
     devServer: {
-        historyApiFallback: true,
+        // historyApiFallback: true,
         hot: true,
         inline: true,
         host: 'localhost', // Defaults to `localhost`
         port: 3000, // Defaults to 8080
+        publicPath: '/'
         // proxy: {
         //     '/api/*': {
         //         target: 'http://localhost:4000/',
@@ -83,8 +87,6 @@ module.exports = {
         // }
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin({
-            multiStep: true
-        })
+        new webpack.HotModuleReplacementPlugin()
     ]
 };

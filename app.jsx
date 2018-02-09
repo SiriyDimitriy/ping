@@ -10,9 +10,9 @@ import Sample from './components/Sample';
 
 ReactDOM.render(
       <Provider store={store}>
-            <HashRouter>
+        <HashRouter>
             <Sample/>
-      </HashRouter>
+        </HashRouter>
       </Provider>,
   document.getElementById('mount')
 )
