@@ -1,0 +1,15 @@
+Next dependencies can be added as needed:
+
+    "react-custom-scrollbars": "4.2.1",
+    "react-loaders": "3.0.1",
+    "loaders.css": "0.1.2",
+    "react-paginate": "5.0.0",
+    "react-s-alert": "1.4.1",
+    "google-maps-react": "1.1.2"
+
+
+    "js-to-styles-var-loader": "1.1.0"
+
+        if you want share vars around js and less you need this loader;
+        to use create styles.js with consts and plug in to less file as:
+            require("./constants/styles.js");  --
