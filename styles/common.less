@@ -1,6 +1,7 @@
 @import './header';
 @import './bell';
 @import './button';
+@import './avatar';
 @import './search';
 @import './navmenu';
 @import './settings_page';
@@ -24,6 +25,10 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+
+    @media(max-width: 1300px) {
+        grid-template-columns: 10% 18% 19% auto 10%;
+    }
 }
 
 .ping_header {
