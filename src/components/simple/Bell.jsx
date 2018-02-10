@@ -1,5 +1,5 @@
 import React from 'react';
-import BellIcon from '../../../assets/svg/bell.svg';
+import BellIcon from '../../assets/svg/bell.svg';
 
 class Bell extends React.Component {
 
