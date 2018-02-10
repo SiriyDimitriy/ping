@@ -1,0 +1,36 @@
+@import './header';
+@import './bell';
+@import './button';
+@import './search';
+@import './navmenu';
+@import './settings_page';
+@import './constants';
+
+html {
+    font-size: 20px;
+}
+
+body {
+    font-size: 1rem;
+    color: @main_font_color;
+    background-color: @page_bg_color;
+}
+
+.ping_header, .ping_page {
+    display: grid;
+    grid-template-columns: 19% 12% 13% auto 19%;
+    grid-column-gap: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.ping_header {
+    height: @header_height;
+}
+
+.ping_page {
+    margin-top: @header_height + 0.5rem;
+}
+

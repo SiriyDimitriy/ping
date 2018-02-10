@@ -1,0 +1,24 @@
+@import './constants';
+
+.ping_header {
+    background-color: @page_block_bg_color;
+    align-items: center;
+
+    &_logo {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    &_search {
+        grid-column-start: 3;
+        grid-column-end: 4
+    }
+
+    &_main{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

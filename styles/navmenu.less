@@ -1,0 +1,24 @@
+@import './constants';
+
+.nav_menu {
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+
+    &_item {
+        display: flex;
+        text-decoration: none;
+        width: 100%;
+        color: @main_font_color;
+        box-sizing: border-box;
+
+        &.active {
+            background-color: @page_block_bg_color;
+            border-left: 2px solid @action_color;
+        }
+
+        &_symbol {
+            margin: 0 0.5rem;
+        }
+    }
+}

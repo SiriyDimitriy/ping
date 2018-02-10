@@ -1,0 +1,19 @@
+@import './constants';
+
+.ping_button {
+    color: @button_text_color;
+    font-size: @button_font_size;
+    padding: 0.5rem;
+    min-width: 7rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+    &--primary {
+        background-color: @action_color;
+    }
+
+    &--secondary {
+        background-color: blue;
+    }
+}
