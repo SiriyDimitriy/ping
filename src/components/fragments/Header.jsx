@@ -1,16 +1,18 @@
 import React from 'react';
 import Bell from '../simple/Bell';
 import Search from '../simple/Search';
+import LogoIcon from '../../assets/svg/small_logo_icon.svg';
+import Avatar from '../simple/Avatar';
 
 class Header extends React.Component {
 
     render() {
         return <div className='ping_header'>
-                <div className='ping_header_logo'>logo</div>
+                <LogoIcon className='ping_header_logo_icon'/>
                 <Search/>
                 <div className='ping_header_main'>
                     <Bell count={13}/>
-                    <div className='ping_header_avatar'>Вася ava</div>
+                    <Avatar name='Вася' path='/login' src='/src/assets/png/ava-example.png'/>
                 </div>
             </div>
 
