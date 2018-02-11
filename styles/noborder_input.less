@@ -1,0 +1,14 @@
+@import './constants';
+
+.noborder_input {
+    border: none;
+    border-bottom: 1px solid @main_font_color_light;
+    outline: none;
+    width: 100%;
+    font-size: @main_font_size;
+    padding-bottom: 0.3rem;
+
+    &::placeholder {
+        color: @main_font_color_light;
+    }
+}

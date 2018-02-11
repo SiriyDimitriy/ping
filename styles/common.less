@@ -3,6 +3,8 @@
 @import './button';
 @import './avatar';
 @import './search';
+@import './dialog';
+@import './noborder_input';
 @import './navmenu';
 @import './settings_page';
 @import './constants';
@@ -15,6 +17,16 @@ body {
     font-size: 1rem;
     color: @main_font_color;
     background-color: @page_bg_color;
+}
+
+h2 {
+    font-size: @h2_font_size;
+    margin: 0;
+}
+
+h3 {
+    font-size: @h3_font_size;
+    margin: 0;
 }
 
 .ping_header, .ping_page {
@@ -37,5 +49,6 @@ body {
 
 .ping_page {
     margin-top: @header_height + 0.5rem;
+    align-items: start;
 }
 

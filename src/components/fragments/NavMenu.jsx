@@ -11,12 +11,12 @@ class NavMenu extends React.Component {
 
     render() {
         return <div className='nav_menu'>
-            <NavMenuItem to='/' text='Профіль' icon={ProfileIcon}/>
-            <NavMenuItem to='/f' text='Повідомлення' icon={MessageIcon}/>
-            <NavMenuItem to='/ff' text='Рейтинг' icon={GraphIcon}/>
-            <NavMenuItem to='/fff' text='Прямі трансляції' icon={VideoIcon}/>
-            <NavMenuItem to='/ffff' text='Налаштування' icon={SettingsIcon}/>
-            <NavMenuItem to='/fffff' text='Вихід' icon={LogoutIcon}/>
+            <NavMenuItem to='/profile' text='Профіль' icon={ProfileIcon}/>
+            <NavMenuItem to='/messages' text='Повідомлення' icon={MessageIcon}/>
+            <NavMenuItem to='/rating' text='Рейтинг' icon={GraphIcon}/>
+            <NavMenuItem to='/video' text='Прямі трансляції' icon={VideoIcon}/>
+            <NavMenuItem to='/settings' text='Налаштування' icon={SettingsIcon}/>
+            <NavMenuItem to='/logout' text='Вихід' icon={LogoutIcon}/>
         </div>
     }
 }

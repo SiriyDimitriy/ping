@@ -1,8 +1,63 @@
 @import './constants';
 
+@page_offset: 1rem;
+
 .settings_page {
     grid-column-start: 3;
     grid-column-end: 5;
 
     background-color: @page_block_bg_color;
+
+    &_header {
+        display: flex;
+        align-items: center;
+        padding: @page_offset;
+        border-bottom: 1px solid @page_bg_color;
+
+        &_arrow_icon {
+            width: 0.8rem;
+            height: 0.8rem;
+            fill: @main_font_color;
+            margin: 0 0.5rem;
+        }
+
+        &_name {
+            color: lighten(@main_font_color, 15%);
+        }
+    }
+
+    &_caption {
+        display: flex;
+        align-items: center;
+        padding: @page_offset;
+
+        &_name {
+        }
+
+        &_line {
+            width: 100%;
+            border-bottom: 1px solid @page_bg_color;
+            margin-left: @page_offset;
+        }
+
+    }
+
+    &_form {
+        margin: 0 @page_offset * 2 1.5rem @page_offset;
+        display: grid;
+        grid-template-columns: 40% auto;
+        grid-template-rows: repeat(8, 1fr);
+        grid-column-gap: @page_offset;
+        align-items: center;
+
+
+        &_about {
+            margin-top: @page_offset;
+        }
+
+
+        .ping_button {
+            margin-top: @page_offset;
+        }
+    }
 }

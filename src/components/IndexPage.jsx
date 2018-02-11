@@ -4,7 +4,13 @@ import withRouter from 'react-router-dom/es/withRouter';
 import {login} from "../actions/secure";
 import Header from './fragments/Header';
 import NavMenu from './fragments/NavMenu';
-import SettingsPage from './pages/SettingsPage';
+import {Route, Switch} from 'react-router-dom';
+import SettingsPage from '../pages/SettingsPage';
+import ErrorPage from "../pages/error";
+import ProfilePage from '../pages/ProfilePage';
+import RatingPage from '../pages/RatingPage';
+import VideoPage from '../pages/VideoPage';
+
 
 const mapStateToProps = state => {
     return {
@@ -28,11 +34,14 @@ class Sample extends React.Component {
             <Header/>
             <div className='ping_page'>
                 <NavMenu/>
-                <SettingsPage/>
-                {/*Hello, world!*/}
-                {/*<div className='sample'>sample</div>*/}
-                {/*<div>User name: {this.props.user.name}</div>*/}
-                {/*<button onClick={this.props.login}>register</button>*/}
+                <Switch>
+                <Route exact path='/' component={SettingsPage}></Route>
+                <Route exact path='/settings' component={SettingsPage}></Route>
+                <Route exact path='/profile' component={ProfilePage}></Route>
+                <Route exact path='/rating' component={RatingPage}></Route>
+                <Route exact path='/video' component={VideoPage}></Route>
+                <Route component={ErrorPage}/>
+                </Switch>
             </div>
         </React.Fragment>
     }

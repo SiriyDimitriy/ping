@@ -1,6 +1,5 @@
 @import './constants';
 @search_font_size: 0.9rem;
-@placeholder_color: lighten(@main_font_color_light, 20%);
 @search_height: 2rem;
 @magnifier_size: 0.8rem;
 @magnifier_offset: 0.5rem;
@@ -27,7 +26,7 @@
         outline: none;
         border: none;
         border-radius: 1rem;
-        box-shadow: inset 0 0 4px 2px @placeholder_color;
+        box-shadow: inset 0 0 4px 2px @main_font_color_light;
         font-size: @search_font_size;
         height: @search_height;
         width: 100%;
@@ -35,7 +34,7 @@
         padding-right: @magnifier_offset * 2;
 
         &::placeholder {
-            color: @placeholder_color;
+            color: @main_font_color_light;
         }
     }
 }
