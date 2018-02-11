@@ -6,8 +6,6 @@ import { render } from "react-dom";
 import { Form, Field } from "react-final-form";
 import {composeValidators, emailField, isRussianDomain, passwordField, requiredField} from "../utils/fields_validation";
 
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-
 const onSubmit =  values => {
     console.log('values', values)
 };
@@ -20,8 +18,7 @@ const Login = () => (
                     <Field name="email" validate={composeValidators(requiredField, emailField, isRussianDomain)}>
                         {({ input, meta }) => (
                             <div>
-                                <label>Email</label>
-                                <input {...input} type="text" placeholder="First Name" />
+                                <input {...input} type="text" placeholder="Ваш Email" />
                                 {meta.error && meta.touched && <span>{meta.error}</span>}
                             </div>
                         )}
@@ -29,22 +26,20 @@ const Login = () => (
                     <Field name="password" validate={composeValidators(requiredField, passwordField)}>
                         {({ input, meta }) => (
                             <div>
-                                <label>Last Name</label>
-                                <input {...input} type="text" placeholder="Last Name" />
+                                <input {...input} type="text" placeholder="Ваш пароль" />
                                 {meta.error && meta.touched && <span>{meta.error}</span>}
                             </div>
                         )}
                     </Field>
                     <div className="buttons">
                         <button type="submit" disabled={submitting}>
-                            Submit
+                            Авторизуватися
                         </button>
+                        <span>АБО</span>
                         <button
                             type="button"
-                            onClick={reset}
-                            disabled={submitting || pristine}
                         >
-                            Reset
+                            FACEBOOK
                         </button>
                     </div>
                 </form>
