@@ -4,7 +4,7 @@ import {login} from "../actions/secure";
 import {render} from "react-dom";
 import {Form, Field} from "react-final-form";
 import {
-    composeValidators, emailField, isRussianDomain, nameField, passwordField,
+    composeValidators, emailField, isRussianDomain, firstNameField, lastNameField, passwordField,
     requiredField
 } from "../utils/fields_validation";
 
@@ -23,7 +23,7 @@ const RegistrationPage = () => (
             onSubmit={onSubmit}
             render={({handleSubmit, reset, submitting, pristine, values}) => (
                 <form onSubmit={handleSubmit} className='auth_page_form'>
-                    <Field name="firstName" validate={composeValidators(requiredField, nameField)}>
+                    <Field name="firstName" validate={composeValidators(requiredField, firstNameField)}>
                         {({input, meta}) => (
                             <div className='auth_page_form_field flex-col'>
                                 <input {...input}
@@ -35,7 +35,7 @@ const RegistrationPage = () => (
                             </div>
                         )}
                     </Field>
-                    <Field name="lastName" validate={composeValidators(requiredField, nameField)}>
+                    <Field name="lastName" validate={composeValidators(requiredField, lastNameField)}>
                         {({input, meta}) => (
                             <div className='auth_page_form_field flex-col'>
                                 <input {...input}
