@@ -1,0 +1,19 @@
+@import './constants';
+
+.rating_page {
+    grid-column-start: 3;
+    grid-column-end: 5;
+
+    background-color: @page_block_bg_color;
+
+    &_parties {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: @page_offset;
+        align-items: center;
+        margin: 0 @page_offset;
+
+        .party {
+        }
+    }
+}

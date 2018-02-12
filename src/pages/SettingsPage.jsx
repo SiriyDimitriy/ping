@@ -1,8 +1,9 @@
 import React from 'react';
 import ActionButton from '../components/simple/ActionButton';
-import RightArrowIcon from '../assets/svg/right-arrow.svg';
 import NoBorderInput from '../components/simple/NoBorderInput';
 import Dialog from '../components/simple/Dialog';
+import BreadCrumbs from '../components/simple/BreadCrumbs';
+import BlockHeader from '../components/simple/BlockHeader';
 
 class SettingsPage extends React.Component {
 
@@ -15,15 +16,8 @@ class SettingsPage extends React.Component {
 
     render() {
         return <div className='settings_page'>
-            <div className='settings_page_header'>
-                <div className='settings_page_header_name'>Вася</div>
-                <RightArrowIcon className='settings_page_header_arrow_icon'/>
-                <div>Налаштування</div>
-            </div>
-            <div className='settings_page_caption'>
-                <h2 className='settings_page_caption_name'>Налаштування</h2>
-                <div className='settings_page_caption_line'></div>
-            </div>
+            <BreadCrumbs items={[{name: 'Вася', path:'/profile'}, {name: 'Налаштування'}]}/>
+            <BlockHeader text='Налаштування'/>
             <div className='settings_page_form'>
                     <h3>Основна інформація</h3>
                     <h3>Безпека</h3>
