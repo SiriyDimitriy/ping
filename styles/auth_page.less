@@ -1,21 +1,20 @@
 @import './constants';
 
 .auth_page {
+  height: 100vh;
+  max-height: 100vh;
+  justify-content: center;
   background-image: url("/src/assets/png/login_left_border_icon.png"), url("/src/assets/png/login_right_border_icon.png");
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: left top, right bottom;
   background-color: @page_block_bg_color;
-  height: 100vh;
-  max-height: 100vh;
   &_logo {
-    margin-top: 6rem;
     width: 20%;
     min-width: 10rem;
   }
   &_form {
     width: 100%;
-    margin-top: 1rem;
     &_field {
       height: 3rem;
       &_input {
@@ -27,6 +26,9 @@
         border: none;
         border-bottom: .1rem solid @main_font_color_light;
         color: @main_font_color_light;
+        &_error {
+          border-bottom: .1rem solid @action_color;
+        }
         &::placeholder {
           color: @main_font_color_light;
         }

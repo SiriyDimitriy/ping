@@ -23,7 +23,11 @@ const Login = () => (
                     <Field name="email" validate={composeValidators(requiredField, emailField, isRussianDomain)}>
                         {({input, meta}) => (
                             <div className='auth_page_form_field flex-col'>
-                                <input {...input} type="text" placeholder="Ваш Email" className='auth_page_form_field_input'/>
+                                <input {...input}
+                                       type="text"
+                                       placeholder="Ваш Email"
+                                       className={'auth_page_form_field_input ' + ((meta.error && meta.touched) ? 'auth_page_form_field_input_error' : '')}
+                                />
                                 {meta.error && meta.touched && <span className='auth_page_form_field_error'>{meta.error}</span>}
                             </div>
                         )}
@@ -31,7 +35,11 @@ const Login = () => (
                     <Field name="password" validate={composeValidators(requiredField, passwordField)}>
                         {({input, meta}) => (
                             <div className='auth_page_form_field flex-col'>
-                                <input {...input} type="text" placeholder="Ваш пароль" className='auth_page_form_field_input'/>
+                                <input {...input}
+                                       type="text"
+                                       placeholder="Ваш пароль"
+                                       className={'auth_page_form_field_input ' + ((meta.error && meta.touched) ? 'auth_page_form_field_input_error' : '')}
+                                />
                                 {meta.error && meta.touched && <span className='auth_page_form_field_error'>{meta.error}</span>}
                             </div>
                         )}
@@ -40,15 +48,6 @@ const Login = () => (
                         <ActionButton text='Авторизуватися' type="primary" actionType="submit" disabled={submitting}/>
                         <span className="auth_page_form_controls_or_block">АБО</span>
                         <ActionButton text='FACEBOOK' type="secondary"/>
-                        {/*<button type="submit" disabled={submitting}>*/}
-                            {/*Авторизуватися*/}
-                        {/*</button>*/}
-
-                        {/*<button*/}
-                            {/*type="button"*/}
-                        {/*>*/}
-                            {/*FACEBOOK*/}
-                        {/*</button>*/}
                     </div>
                 </form>
             )}
