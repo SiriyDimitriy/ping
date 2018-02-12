@@ -12,18 +12,35 @@
         grid-column-gap: @page_offset;
         align-items: center;
         margin: 0 @page_offset;
-
-        .party {
-        }
     }
 
-    &_show_whole {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        color: @action_color;
-        font-size: @button_font_size;
-        margin-bottom: @page_offset;
-        text-align: center;
-        cursor: pointer;
+    .party_description {
+        display: flex;
+        align-items: flex-start;
+
+        &_image {
+            width: 7rem;
+            height: 7rem;
+            object-fit: cover;
+            margin: @page_offset;
+        }
+
+        &_content {
+            flex-grow: 1;
+
+            &_text {
+                color: @breadcrumbs_font_color;
+            }
+        }
+    }
+}
+
+// overrides for parties page
+.party_page {
+    .party {
+        .ping_button {
+            min-width: 6rem;
+            width: 6rem;
+        }
     }
 }

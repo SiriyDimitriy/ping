@@ -12,6 +12,7 @@
 @import './navmenu';
 @import './settings_page';
 @import './rating_page';
+@import './video_page';
 @import './auth_page';
 @import './constants';
 @import './utils';
@@ -27,6 +28,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: "OpenSans", sans-serif;;
+}
+
+h1 {
+    font-size: @h1_font_size;
+    margin: 0;
 }
 
 h2 {
@@ -62,3 +68,13 @@ h3 {
     align-items: start;
 }
 
+// styles for common used elements
+.show_whole {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: @action_color;
+    font-size: @button_font_size;
+    margin-bottom: @page_offset;
+    text-align: center;
+    cursor: pointer;
+}

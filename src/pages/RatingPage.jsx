@@ -22,7 +22,7 @@ class RatingPage extends React.Component {
                 <Party {...party}/>
                 <Party {...party}/>
             </div>
-            <div className='rating_page_show_whole'>Показати повністю</div>
+            <div className='show_whole'>Показати повністю</div>
         </div>
     }
 }
