@@ -1,9 +1,15 @@
 @import './constants';
 
 .login_page {
-    background-image: url("/src/assets/svg/login_left_border_icon.svg");
+    background-image: url("/src/assets/png/login_left_border_icon.png"), url("/src/assets/png/login_right_border_icon.png");
     background-repeat: no-repeat;
-    //background-size:100% auto;
+    background-size:auto 100%;
+    background-position: left top, right bottom;
     background-color: @page_block_bg_color;
     height: 100vh;
+    max-height: 100vh;
+    .login_page_logo {
+        margin-top: 130px;
+
+    }
 }

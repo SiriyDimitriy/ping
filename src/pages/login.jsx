@@ -7,13 +7,15 @@ import {Form, Field} from "react-final-form";
 import {composeValidators, emailField, isRussianDomain, passwordField, requiredField} from "../utils/fields_validation";
 
 import '../../styles/login_page.less'
+import Logo from '../../src/assets/svg/large_logo_icon.svg'
 
 const onSubmit = values => {
     console.log('values', values)
 };
 
 const Login = () => (
-    <div className='login_page'>
+    <div className='login_page flex-col'>
+        <Logo className='login_page_logo'/>
         <Form
             onSubmit={onSubmit}
             render={({handleSubmit, reset, submitting, pristine, values}) => (
