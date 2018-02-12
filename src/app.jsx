@@ -8,15 +8,17 @@ import {Provider} from 'react-redux'
 import store from './Store.js';
 import IndexPage from './components/IndexPage';
 import '../styles/common.less';
-import Login from "./pages/login";
+import LoginPage from "./pages/LoginPage";
 import ErrorPage from "./pages/error";
 import SettingsPage from './pages/SettingsPage';
+import RegistrationPage from "./pages/RegistrationPage";
 
 ReactDOM.render(
       <Provider store={store}>
         <HashRouter>
             <Switch>
-                <Route exact path='/login' component={Login}/>
+                <Route exact path='/login' component={LoginPage}/>
+                <Route exact path='/register' component={RegistrationPage}/>
                 <Route component={IndexPage}/>
             </Switch>
         </HashRouter>

@@ -1,5 +1,7 @@
 const requiredField = value => (value ? undefined : "Required");
 
+const nameField = value => (((/^[a-zA-Zа-яА-Я]+$/).test(value)) ? "Invalid name" : undefined);
+
 const emailField = value => ((!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) ? "Invalid email" : undefined);
 
 const isRussianDomain = value => ((/\.ru|\.su|yandex/i.test(value)) ? "Deprecated domain" : undefined);
@@ -10,6 +12,7 @@ const composeValidators = (...validators) => value => validators.reduce((error, 
 
 export {
     requiredField,
+    nameField,
     emailField,
     isRussianDomain,
     passwordField,
