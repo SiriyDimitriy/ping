@@ -9,10 +9,12 @@ class Party extends React.Component {
 
     render() {
         return <div className='party'>
-            <img className='party_img' src='/src/assets/png/ava-example.png'></img>
-            <div className='party_text'>
-                <div>Блок зеленої змії</div>
-                <div>Консервативний пофігізм</div>
+            <div className='party_content'>
+                <img className='party_content_img' src='/src/assets/png/ava-example.png'></img>
+                <div className='party_content_text'>
+                    <div className='party_content_text_name'>Блок зеленої змії</div>
+                    <div className='party_content_text_description'>Консервативний пофігізм</div>
+                </div>
             </div>
             <ActionButton type='primary' text='Перейти'/>
         </div>

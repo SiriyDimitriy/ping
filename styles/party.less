@@ -1,23 +1,50 @@
 @import './constants';
 
+@party_description_font_size: 0.8rem;
+@party_name_font_size: 0.9rem;
+
+
 .party {
-    display: flex;
-    align-items: center;
     border: 1px solid @page_bg_color;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: @page_offset;
 
-    &_img {
-        border-radius: 50%;
-        border: 1px solid @page_bg_color;
-        width: 3rem;
-        height: 3rem;
-        object-fit: cover;
+    &_content {
+        display: flex;
+        align-items: center;
+
+        &_img {
+            border-radius: 50%;
+            border: 1px solid @page_bg_color;
+            width: 3rem;
+            height: 3rem;
+            object-fit: cover;
+            margin: 0.5rem;
+        }
+
+        &_text {
+            &_name {
+                font-weight: 700;
+                font-size: @party_name_font_size;
+            }
+
+            &_description {
+                font-size: @party_description_font_size;
+            }
+        }
     }
 
-    &_text {
-
-    }
 
     .ping_button {
-        height: 100%;
+        display: block;
+        min-width: 5rem;
+        width: 5rem;
+        margin-left: 0.5rem;
+        background-color: @main_font_color;
+
+        &:hover {
+            background-color: @action_color;
+        }
     }
 }
