@@ -6,14 +6,21 @@ import Party from '../components/simple/Party';
 class RatingPage extends React.Component {
 
     render() {
+        const party = {
+            name: 'Блок зеленої змії',
+            description: 'Консервативний пофігізм',
+            src: '/src/assets/png/ava-example.png',
+            buttonText: 'Перейти',
+            path: '/parties/zz'
+        }
         return <div className='rating_page'>
             <BreadCrumbs items={[{name: 'Вася', path:'/profile'}, {name: 'Партії'}]}/>
             <BlockHeader text='Список партій'/>
             <div className='rating_page_parties'>
-                <Party/>
-                <Party/>
-                <Party/>
-                <Party/>
+                <Party {...party}/>
+                <Party {...party}/>
+                <Party {...party}/>
+                <Party {...party}/>
             </div>
             <div className='rating_page_show_whole'>Показати повністю</div>
         </div>
