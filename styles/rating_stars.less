@@ -1,0 +1,32 @@
+@import './constants';
+
+.rating_stars {
+    display: flex;
+    align-items: center;
+    margin: 0.2rem 0;
+
+    .star {
+        margin-right: 0.1rem;
+        width: 0.5rem;
+        height: 0.5rem;
+        fill: @main_font_color_light;
+
+        &--one.filled{
+            fill: #ffd630;
+        }
+        &--two.filled {
+            fill: #ffbd30;
+        }
+        &--tree.filled {
+            fill: #ff9b30;
+        }
+        &--four.filled {
+            fill: #ff6a30;
+        }
+        &--five.filled {
+            fill: #ff4930;
+        }
+    }
+
+
+}

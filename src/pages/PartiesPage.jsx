@@ -2,19 +2,19 @@ import React from 'react';
 import BreadCrumbs from '../components/simple/BreadCrumbs';
 import BlockHeader from '../components/simple/BlockHeader';
 import Party from '../components/simple/Party';
+import RatingStars from '../components/simple/RatingStars';
 
-class RatingPage extends React.Component {
+class PartiesPage extends React.Component {
 
     render() {
         const party = {
-            name: 'Блок зеленої змії',
-            description: 'Консервативний пофігізм',
+            name: 'Зелена змія',
+            description: <div><RatingStars/>Партія: {this.props.match.params.id}</div>,
             src: '/src/assets/png/ava-example.png',
-            buttonText: 'Перейти',
-            path: '/parties/zz'
+            buttonText: 'Написати повідомлення'
         }
         return <div className='rating_page'>
-            <BreadCrumbs items={[{name: 'Вася', path:'/profile'}, {name: 'Партії'}]}/>
+            <BreadCrumbs items={[{name: 'Вася', path:'/profile'}, {name: 'Партії', path: '/rating'}, {name: 'ЗеленаЗмія'}]}/>
             <BlockHeader text='Список партій'/>
             <div className='rating_page_parties'>
                 <Party {...party}/>
@@ -27,4 +27,4 @@ class RatingPage extends React.Component {
     }
 }
 
-export default RatingPage;
+export default PartiesPage;
