@@ -1,0 +1,52 @@
+@import './constants';
+
+.auth_page {
+  background-image: url("/src/assets/png/login_left_border_icon.png"), url("/src/assets/png/login_right_border_icon.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left top, right bottom;
+  background-color: @page_block_bg_color;
+  height: 100vh;
+  max-height: 100vh;
+  &_logo {
+    margin-top: 6rem;
+    width: 20%;
+    min-width: 10rem;
+  }
+  &_form {
+    width: 100%;
+    margin-top: 1rem;
+    &_field {
+      height: 3rem;
+      &_input {
+        height: 2rem;
+        width: 40%;
+        max-width: 25rem;
+        min-width: 10rem;
+        outline: none;
+        border: none;
+        border-bottom: .1rem solid @main_font_color_light;
+        color: @main_font_color_light;
+        &::placeholder {
+          color: @main_font_color_light;
+        }
+      }
+      &_error {
+        height: 1rem;
+        color: @action_color;
+        font-size: @button_font_size;
+      }
+    }
+    &_controls {
+      margin-top: 1rem;
+      &_or_block {
+        margin: 0.3rem 0;
+        font-weight: 600;
+      }
+      .ping_button {
+        width: 40%;
+        max-width: 25rem;
+      }
+    }
+  }
+}

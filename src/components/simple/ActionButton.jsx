@@ -7,7 +7,7 @@ class ActionButton extends React.Component {
         if (this.props.type) {
             className+=`ping_button--${this.props.type}`;
         }
-        return <button className={className} onClick={this.props.onClick}>{this.props.text}</button>;
+        return <button className={className} onClick={this.props.onClick} type={this.props.actionType}>{this.props.text}</button>;
     }
 }
 
