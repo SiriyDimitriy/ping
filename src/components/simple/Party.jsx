@@ -1,6 +1,8 @@
 import React from 'react';
 import ActionButton from './ActionButton';
+import {withRouter} from "react-router";
 
+@withRouter
 class Party extends React.Component {
 
     render() {

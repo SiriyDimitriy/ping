@@ -11,7 +11,7 @@ class RatingPage extends React.Component {
             description: 'Консервативний пофігізм',
             src: '/src/assets/png/ava-example.png',
             buttonText: 'Перейти',
-            path: '/parties/zz'
+            path: '/rating/parties/zz'
         }
         return <div className='rating_page'>
             <BreadCrumbs items={[{name: 'Вася', path:'/profile'}, {name: 'Партії'}]}/>

@@ -14,7 +14,7 @@ class NavMenu extends React.Component {
             <NavMenuItem to='/profile' text='Профіль' icon={ProfileIcon}/>
             <NavMenuItem to='/messages' text='Повідомлення' icon={MessageIcon}/>
             <NavMenuItem to='/rating' text='Рейтинг' icon={GraphIcon}/>
-            <NavMenuItem to='/video' text='Прямі трансляції' icon={VideoIcon}/>
+            <NavMenuItem to='/videos' text='Прямі трансляції' icon={VideoIcon}/>
             <NavMenuItem to='/settings' text='Налаштування' icon={SettingsIcon}/>
             <NavMenuItem to='/logout' text='Вихід' icon={LogoutIcon}/>
         </div>
