@@ -1,8 +1,4 @@
-const requiredField = value => (value ? undefined : "Required");
-
-const firstNameField = value => ((!(/^[A-Я{1}][a-я]+$/).test(value)) ? "Невірне або неправильне ім'я" : undefined);
-
-const lastNameField = value => ((!(/^[A-Я{1}][a-я]+$/).test(value)) ? "Невірне або неправильне прізвище" : undefined);
+const requiredField = value => (value ? undefined : "Обов'язкове поле");
 
 const emailField = value => ((!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) ? "Неправильна поштова скринька" : undefined);
 
@@ -67,8 +63,6 @@ const composeValidators = (...validators) => value => validators.reduce((error, 
 
 export {
     requiredField,
-    firstNameField,
-    lastNameField,
     emailField,
     isRussianDomain,
     passwordField,

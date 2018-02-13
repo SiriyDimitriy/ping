@@ -1,13 +1,10 @@
 import React from 'react';
-import connect from 'react-redux/es/connect/connect';
-import {login} from "../actions/secure";
-import {render} from "react-dom";
 import {Form, Field} from "react-final-form";
 import {composeValidators, emailField, isRussianDomain, passwordField, requiredField} from "../utils/fields_validation";
 
-import '../../styles/auth_page.less'
 import Logo from '../../src/assets/svg/large_logo_icon.svg'
 import ActionButton from "../components/simple/ActionButton";
+import Link from "react-router-dom/es/Link";
 
 const onSubmit = values => {
     console.log('values', values)
@@ -36,7 +33,7 @@ const Login = () => (
                         {({input, meta}) => (
                             <div className='auth_page_form_field flex-col'>
                                 <input {...input}
-                                       type="text"
+                                       type="password"
                                        placeholder="Ваш пароль"
                                        className={'auth_page_form_field_input ' + ((meta.error && meta.touched) ? 'auth_page_form_field_input_error' : '')}
                                 />
@@ -52,6 +49,9 @@ const Login = () => (
                 </form>
             )}
         />
+        <div className='auth_page_to_register'>
+            Якщо Ви не маєте облікового запису, необхідно спочатку його <Link to={'/register'} className='auth_page_to_register_link'>Зареєструвати</Link>
+        </div>
     </div>
 );
 

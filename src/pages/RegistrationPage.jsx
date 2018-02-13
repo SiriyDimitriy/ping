@@ -1,11 +1,7 @@
 import React from 'react';
-import connect from 'react-redux/es/connect/connect';
-import {login} from "../actions/secure";
-import {render} from "react-dom";
 import {Form, Field} from "react-final-form";
 import {validateRegisterFormFields} from "../utils/fields_validation";
 
-import '../../styles/auth_page.less'
 import Logo from '../../src/assets/svg/large_logo_icon.svg'
 import ActionButton from "../components/simple/ActionButton";
 
@@ -64,7 +60,7 @@ const RegistrationPage = () => (
                         {({input, meta}) => (
                             <div className='auth_page_form_field flex-col'>
                                 <input {...input}
-                                       type="text"
+                                       type="password"
                                        placeholder="Ваш пароль"
                                        className={'auth_page_form_field_input ' + ((meta.error && meta.touched) ? 'auth_page_form_field_input_error' : '')}
                                 />
@@ -77,7 +73,7 @@ const RegistrationPage = () => (
                         {({input, meta}) => (
                             <div className='auth_page_form_field flex-col'>
                                 <input {...input}
-                                       type="text"
+                                       type="password"
                                        placeholder="Повторити пароль"
                                        className={'auth_page_form_field_input ' + ((meta.error && meta.touched) ? 'auth_page_form_field_input_error' : '')}
                                 />
