@@ -9,7 +9,7 @@ class RatingStars extends React.Component {
             <StarIcon className='star star--two filled'/>
             <StarIcon className='star star--tree filled'/>
             <StarIcon className='star star--four filled'/>
-            <StarIcon className='star star--five'/>
+            <StarIcon className='star star--five filled'/>
         </div>
     }
 }
