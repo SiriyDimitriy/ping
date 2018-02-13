@@ -3,10 +3,7 @@ import connect from 'react-redux/es/connect/connect';
 import {login} from "../actions/secure";
 import {render} from "react-dom";
 import {Form, Field} from "react-final-form";
-import {
-    composeValidators, emailField, isRussianDomain, firstNameField, lastNameField, passwordField,
-    requiredField
-} from "../utils/fields_validation";
+import {validateRegisterFormFields} from "../utils/fields_validation";
 
 import '../../styles/auth_page.less'
 import Logo from '../../src/assets/svg/large_logo_icon.svg'
@@ -20,10 +17,11 @@ const RegistrationPage = () => (
     <div className='auth_page flex-col'>
         <Logo className='auth_page_logo'/>
         <Form
+            validate={validateRegisterFormFields}
             onSubmit={onSubmit}
             render={({handleSubmit, reset, submitting, pristine, values}) => (
                 <form onSubmit={handleSubmit} className='auth_page_form'>
-                    <Field name="firstName" validate={composeValidators(requiredField, firstNameField)}>
+                    <Field name="firstName">
                         {({input, meta}) => (
                             <div className='auth_page_form_field flex-col'>
                                 <input {...input}
@@ -31,11 +29,12 @@ const RegistrationPage = () => (
                                        placeholder="Ваше ім'я"
                                        className={'auth_page_form_field_input ' + ((meta.error && meta.touched) ? 'auth_page_form_field_input_error' : '')}
                                 />
-                                {meta.error && meta.touched && <span className='auth_page_form_field_error'>{meta.error}</span>}
+                                {meta.error && meta.touched &&
+                                <span className='auth_page_form_field_error'>{meta.error}</span>}
                             </div>
                         )}
                     </Field>
-                    <Field name="lastName" validate={composeValidators(requiredField, lastNameField)}>
+                    <Field name="lastName">
                         {({input, meta}) => (
                             <div className='auth_page_form_field flex-col'>
                                 <input {...input}
@@ -43,11 +42,12 @@ const RegistrationPage = () => (
                                        placeholder="Ваше прізвище"
                                        className={'auth_page_form_field_input ' + ((meta.error && meta.touched) ? 'auth_page_form_field_input_error' : '')}
                                 />
-                                {meta.error && meta.touched && <span className='auth_page_form_field_error'>{meta.error}</span>}
+                                {meta.error && meta.touched &&
+                                <span className='auth_page_form_field_error'>{meta.error}</span>}
                             </div>
                         )}
                     </Field>
-                    <Field name="email" validate={composeValidators(requiredField, emailField, isRussianDomain)}>
+                    <Field name="email">
                         {({input, meta}) => (
                             <div className='auth_page_form_field flex-col'>
                                 <input {...input}
@@ -55,11 +55,12 @@ const RegistrationPage = () => (
                                        placeholder="Ваш Email"
                                        className={'auth_page_form_field_input ' + ((meta.error && meta.touched) ? 'auth_page_form_field_input_error' : '')}
                                 />
-                                {meta.error && meta.touched && <span className='auth_page_form_field_error'>{meta.error}</span>}
+                                {meta.error && meta.touched &&
+                                <span className='auth_page_form_field_error'>{meta.error}</span>}
                             </div>
                         )}
                     </Field>
-                    <Field name="password" validate={composeValidators(requiredField, passwordField)}>
+                    <Field name="password">
                         {({input, meta}) => (
                             <div className='auth_page_form_field flex-col'>
                                 <input {...input}
@@ -67,11 +68,12 @@ const RegistrationPage = () => (
                                        placeholder="Ваш пароль"
                                        className={'auth_page_form_field_input ' + ((meta.error && meta.touched) ? 'auth_page_form_field_input_error' : '')}
                                 />
-                                {meta.error && meta.touched && <span className='auth_page_form_field_error'>{meta.error}</span>}
+                                {meta.error && meta.touched &&
+                                <span className='auth_page_form_field_error'>{meta.error}</span>}
                             </div>
                         )}
                     </Field>
-                    <Field name="passwordConfirm" validate={composeValidators(requiredField, passwordField)}>
+                    <Field name="passwordConfirm">
                         {({input, meta}) => (
                             <div className='auth_page_form_field flex-col'>
                                 <input {...input}
@@ -79,7 +81,8 @@ const RegistrationPage = () => (
                                        placeholder="Повторити пароль"
                                        className={'auth_page_form_field_input ' + ((meta.error && meta.touched) ? 'auth_page_form_field_input_error' : '')}
                                 />
-                                {meta.error && meta.touched && <span className='auth_page_form_field_error'>{meta.error}</span>}
+                                {meta.error && meta.touched &&
+                                <span className='auth_page_form_field_error'>{meta.error}</span>}
                             </div>
                         )}
                     </Field>
