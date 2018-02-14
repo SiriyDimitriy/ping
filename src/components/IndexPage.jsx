@@ -12,6 +12,7 @@ import RatingPage from '../pages/RatingPage';
 import VideosPage from '../pages/VideosPage';
 import VideoPage from '../pages/VideoPage';
 import PartiesPage from '../pages/PartiesPage';
+import MessagesPage from "../pages/MessagesPage";
 
 
 const mapStateToProps = state => {
@@ -40,6 +41,7 @@ class Sample extends React.Component {
                     <Route exact path='/' component={SettingsPage}></Route>
                     <Route exact path='/settings' component={SettingsPage}></Route>
                     <Route exact path='/profile' component={ProfilePage}></Route>
+                    <Route exact path='/messages' component={MessagesPage}></Route>
                     <Route exact path='/rating' component={RatingPage}></Route>
                     <Route exact path='/rating/parties/:id' component={PartiesPage}></Route>
                     <Route exact path='/videos' component={VideosPage}></Route>
