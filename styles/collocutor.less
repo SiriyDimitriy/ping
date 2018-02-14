@@ -1,0 +1,60 @@
+@import './constants';
+
+.collocutor {
+    display: flex;
+    align-items: center;
+    padding-right: 0.5rem;
+
+    &:hover {
+        background-color: @message_color_1;
+    }
+
+    .avatar {
+        //width: 20%;
+    }
+
+    &_info {
+        flex-grow: 1;
+        display: flex;
+        align-items: flex-start;
+        //width: 80%;
+
+        &_dot {
+            border-radius: 50%;
+            width: 0.5rem;
+            min-width: 0.5rem;
+            height: 0.5rem;
+            background-color: @action_color;
+        }
+
+        &_text {
+            flex-grow: 1;
+            overflow: hidden;
+
+            &_person {
+                display: flex;
+                justify-content: space-between;
+
+                &_name {
+                    font-weight: 600;
+                }
+
+                &_date {
+                    font-style: italic;
+                }
+
+            }
+
+            &_message {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+            }
+
+            &_question {
+                color: @action_color;
+                font-size: @button_font_size;
+            }
+        }
+    }
+}

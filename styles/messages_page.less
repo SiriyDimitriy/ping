@@ -3,6 +3,32 @@
 .messages_page {
     grid-column-start: 3;
     grid-column-end: 5;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 20rem auto;
+    padding-right: @page_offset;
+    padding-left: @page_offset;
+
+    &_users {
+        border-right: 1px solid @page_bg_color;
+        border-bottom: 1px solid @page_bg_color;
+        .search_input {
+            box-shadow: none;
+        }
+    }
+
+    &_messages {
+        border-bottom: 1px solid @page_bg_color;
+
+    }
+
+    &_footer1 {
+        border-right: 1px solid @page_bg_color;
+    }
+
+    &_footer2 {
+    }
+
 
     background-color: @page_block_bg_color;
 
