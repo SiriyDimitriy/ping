@@ -1,7 +1,5 @@
 @import './constants';
 
-
-
 .profile_page {
     background-color: @page_block_bg_color;
 
@@ -9,6 +7,26 @@
     grid-column-start: 3;
     grid-column-end: 4;
 
+    padding: 1rem;
+    .ping_button {
+      min-width: auto;
+      max-width: initial;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    &_avatar_block {
+      position: relative;
+      &_image {
+        width: 100%;
+      }
+      &_rating_stars_wrapper {
+        background-color: @page_block_bg_color;
+        border-radius: 1rem;
+        position: absolute;
+        bottom: -0.5rem;
+        padding: 0 .5rem;
+      }
+    }
   }
   &_right {
     grid-column-start: 4;
