@@ -12,8 +12,8 @@ class VideosPage extends React.Component {
             <BreadCrumbs items={[{name: 'Вася', path: '/profile'}, {name: 'Прямі трансляції'}]}/>
             <BlockHeader text='Прямі трансляції'/>
             <div className='videos_page_list flex-row'>
-                {[1, 2, 3].map(el => <Link to={`/videos/${videoId}`} className='videos_page_list_item' key={el}>
-                        <img src={`https://img.youtube.com/vi/${videoId}/1.jpg`}
+                {['KAuhQCkyevs', 'ZO_q5yCqtjU', 'q-b19BiYvks'].map(el => <Link to={`/videos/${el}`} className='videos_page_list_item' key={el}>
+                        <img src={`https://img.youtube.com/vi/${el}/1.jpg`}
                              alt="img"
                              className='videos_page_list_item_background'
                         />
