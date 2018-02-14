@@ -32,13 +32,12 @@ const mapDispatchToProps = dispatch => {
 class Sample extends React.Component {
 
     render() {
-        console.log('ssssssssssss', this.props)
         return <React.Fragment>
             <Header/>
             <div className='ping_page'>
                 <NavMenu/>
                 <Switch>
-                    {/*<Route exact path='/' component={SettingsPage}></Route>*/}
+                    <Route exact path='/' component={ProfilePage}></Route>
                     {/*<Route exact path='/settings' component={SettingsPage}></Route>*/}
                     <Route exact path='/profile' component={ProfilePage}></Route>
                     {/*<Route exact path='/messages' component={MessagesPage}></Route>*/}
