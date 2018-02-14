@@ -1,3 +1,7 @@
+Start dev environment:
+
+    npm run dev
+
 Next dependencies can be added as needed:
 
     "react-custom-scrollbars": "4.2.1",

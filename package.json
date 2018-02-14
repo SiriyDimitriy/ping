@@ -5,8 +5,9 @@
   "main": "webpack.config.js",
   "scripts": {
     "dev": "npm-run-all --parallel webpack-watch webpack-dev-server",
-    "webpack-dev-server": "webpack-dev-server --port 3000",
-    "webpack-watch": "webpack"
+    "webpack-dev-server": "./node_modules/.bin/webpack-dev-server --port 3000",
+    "webpack-watch": "./node_modules/.bin/webpack --watch",
+    "build": "./node_modules/.bin/webpack"
   },
   "repository": {
     "type": "git",
